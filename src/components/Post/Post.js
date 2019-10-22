@@ -1,5 +1,26 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import styled from 'styled-components'
+
+import { StyledPost } from './StyledPost'
+import { LinkButton } from '../Global/Button'
+
+const StyledUserInfo = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.45rem;
+
+  img {
+    border-radius: 50%;
+    margin-bottom: 0;
+    max-width: 72px;
+    margin-right: 1.45rem;
+  }
+
+  p {
+    margin: 0;
+  }
+`
 
 const Post = ( props ) => {
   const [hasError, setErrors] = useState( false )
@@ -20,11 +41,14 @@ const Post = ( props ) => {
   }, [] )
 
   return(
-    <div>
-      <img src={userInfo.image_72} alt=""/>
-      <h1>{userInfo.display_name}</h1>
+    <StyledPost>
+      <StyledUserInfo>
+        <img src={userInfo.image_72} alt=""/>
+        <p>{userInfo.real_name_normalized}</p>
+      </StyledUserInfo>
       <p>{text}</p>
-    </div>
+      <LinkButton href="#">Apply Now!</LinkButton>
+    </StyledPost>
   )
 }
 

@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import styled from 'styled-components'
 
-import Post from "../components/Post"
+import Post from "../components/Post/Post"
+import Layout from '../theme/layout'
+
+const StyledContainer = styled.div`
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat( auto-fill, minmax(300px, 1fr) );
+`
 
 
 export default () => {
@@ -24,9 +32,11 @@ export default () => {
   const posts = messages.map(message => message.client_msg_id ? <Post key={message.client_msg_id} postData={message} /> : null)
 
   return (
-    <div>
+    <Layout>
       <h1>Jobs</h1>
-      {posts}
-    </div>
+      <StyledContainer grid cols="4">
+        {posts}
+      </StyledContainer>
+    </Layout>
   )
 }
