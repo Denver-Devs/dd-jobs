@@ -13,5 +13,8 @@ module.exports = {
         pure: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-react-helmet`
+    }
   ],
 }
