@@ -42,11 +42,13 @@ const Post = ( props ) => {
 
   return(
     <StyledPost>
-      <StyledUserInfo>
-        <img src={userInfo.image_72} alt=""/>
-        <p>{userInfo.real_name_normalized}</p>
-      </StyledUserInfo>
-      <p>{text}</p>
+      <div className="content">
+        <StyledUserInfo>
+          <img src={userInfo.image_72} alt=""/>
+          <p>{userInfo.real_name_normalized}</p>
+        </StyledUserInfo>
+        <p>{text}</p>
+      </div>
       <LinkButton href="#">Apply Now!</LinkButton>
     </StyledPost>
   )

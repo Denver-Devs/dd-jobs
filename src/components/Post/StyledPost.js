@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
 export const StyledPost = styled.div`
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
+  justify-content: space-between;
   margin-bottom: 30px;
   padding: 20px;
   border-radius: 10px;

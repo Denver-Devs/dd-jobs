@@ -4,11 +4,15 @@ import styled from 'styled-components'
 
 import Post from "../components/Post/Post"
 import Layout from '../theme/layout'
+import { bpSmall } from '../styles/base/variables'
 
 const StyledContainer = styled.div`
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat( auto-fill, minmax(300px, 1fr) );
+
+  @media(${bpSmall}) {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat( auto-fit, minmax(500px, 1fr) );
+  }
 `
 
 
@@ -34,7 +38,7 @@ export default () => {
   return (
     <Layout>
       <h1>Jobs</h1>
-      <StyledContainer grid cols="4">
+      <StyledContainer>
         {posts}
       </StyledContainer>
     </Layout>
