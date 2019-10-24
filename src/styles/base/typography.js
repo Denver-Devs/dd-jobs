@@ -1,8 +1,6 @@
 import { css } from 'styled-components'
 
 export const Typography = css`
-  @import url('https://fonts.googleapis.com/css?family=Work+Sans:600|Quattrocento+Sans:400,400i,700');
-
   html {
     font-size: 10px;
   }
@@ -13,7 +11,7 @@ export const Typography = css`
     word-wrap: break-word;
     font-kerning: normal;
     font-feature-settings: "kern", "liga", "clig", "calt";
-    font-size: 1.6rem;
+    font-size: 1rem;
   }
 
   h1,
