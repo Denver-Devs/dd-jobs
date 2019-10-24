@@ -27,7 +27,7 @@ const Post = ( props ) => {
   const [userInfo, setUserInfo] = useState( {} )
   const { user, text } = props.postData
 
-  const SLACK_REQ = `https://slack.com/api/users.profile.get?token=${process.env.SLACK_TOKEN}&user=${user}`
+  const SLACK_REQ = `https://slack.com/api/users.profile.get?token=${process.env.GATSBY_SLACK_TOKEN}&user=${user}`
 
 
   const fetchData = () => {
